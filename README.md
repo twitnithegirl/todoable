@@ -47,7 +47,7 @@ If a method is unsuccessful you will get back an error response in the same hash
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `ruby test` to run the tests.
+After checking out the repo, run `bin/setup` to install dependencies. Then, run `ruby test/<filename>` to run a test file.
 
 `pry` is built into dev so you can use it to debug and step through tests.
 
