@@ -12,11 +12,11 @@ module Todoable
       end
 
       def mark_item_finished(list_id, item_id)
-        request(method: :put, endpoint: "/lists/#{list_id}/#{item_id}/finish"
+        request(method: :put, endpoint: "/lists/#{list_id}/items/#{item_id}/finish")
       end
 
       def delete_item(list_id, item_id)
-        request(method: :delete, endpoint: "/lists/#{list_id}/#{item_id}"
+        request(method: :delete, endpoint: "/lists/#{list_id}/items/#{item_id}")
       end
     end
   end

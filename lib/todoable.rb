@@ -4,6 +4,7 @@ require 'httparty'
 
 require_relative './todoable/version'
 require_relative './todoable/list'
+require_relative './todoable/item'
 require_relative './client'
 require_relative './errors'
 

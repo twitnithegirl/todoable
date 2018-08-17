@@ -1,0 +1,79 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://todoable.teachable.tech/api/lists/45ad03cf-6c7b-47af-88d4-c6165c9f9422/items
+    body:
+      encoding: UTF-8
+      string: '{"item":{"name":"Finished thing"}}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Authorization:
+      - Token token=a0de8b7f-d81c-488a-b07a-db821347ebbb
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Fri, 17 Aug 2018 03:56:54 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json;charset=utf-8
+      Location:
+      - http://todoable.teachable.tech/api/lists/45ad03cf-6c7b-47af-88d4-c6165c9f9422/items/ec841ae8-9128-46d9-b5b6-62e429a184db
+      Content-Length:
+      - '217'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - thin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"name":"Finished thing","finished_at":null,"src":"http://todoable.teachable.tech/api/lists/45ad03cf-6c7b-47af-88d4-c6165c9f9422/items/ec841ae8-9128-46d9-b5b6-62e429a184db","id":"ec841ae8-9128-46d9-b5b6-62e429a184db"}'
+    http_version: 
+  recorded_at: Fri, 17 Aug 2018 03:56:55 GMT
+- request:
+    method: put
+    uri: http://todoable.teachable.tech/api/lists/45ad03cf-6c7b-47af-88d4-c6165c9f9422/items/ec841ae8-9128-46d9-b5b6-62e429a184db/finish
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Authorization:
+      - Token token=a0de8b7f-d81c-488a-b07a-db821347ebbb
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 17 Aug 2018 03:56:54 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '23'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - thin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: Finished thing finished
+    http_version: 
+  recorded_at: Fri, 17 Aug 2018 03:56:55 GMT
+recorded_with: VCR 4.0.0

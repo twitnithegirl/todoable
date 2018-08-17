@@ -1,10 +1,12 @@
 # frozen_string_literal: true
 
 require_relative './todoable/list'
+require_relative './todoable/item'
 
 module Todoable
   class Client
     include Todoable::Client::List
+    include Todoable::Client::Item
 
     attr_accessor :auth, :username, :password, :api_url
 

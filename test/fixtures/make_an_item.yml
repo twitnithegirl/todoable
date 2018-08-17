@@ -1,0 +1,42 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://todoable.teachable.tech/api/lists/45ad03cf-6c7b-47af-88d4-c6165c9f9422/items
+    body:
+      encoding: UTF-8
+      string: '{"item":{"name":"Buy flour"}}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Authorization:
+      - Token token=a0de8b7f-d81c-488a-b07a-db821347ebbb
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Fri, 17 Aug 2018 03:49:52 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json;charset=utf-8
+      Location:
+      - http://todoable.teachable.tech/api/lists/45ad03cf-6c7b-47af-88d4-c6165c9f9422/items/ed764dba-70a8-4d2c-88a3-eb3edb36997a
+      Content-Length:
+      - '212'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - thin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"name":"Buy flour","finished_at":null,"src":"http://todoable.teachable.tech/api/lists/45ad03cf-6c7b-47af-88d4-c6165c9f9422/items/ed764dba-70a8-4d2c-88a3-eb3edb36997a","id":"ed764dba-70a8-4d2c-88a3-eb3edb36997a"}'
+    http_version: 
+  recorded_at: Fri, 17 Aug 2018 03:49:52 GMT
+recorded_with: VCR 4.0.0
