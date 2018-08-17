@@ -10,5 +10,4 @@ require_relative './errors'
 API_URL = "http://todoable.teachable.tech/api"
 
 module Todoable
-
 end

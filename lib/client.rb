@@ -1,7 +1,12 @@
-module Todoable
+# frozen_string_literal: true
 
+require_relative './todoable/list'
+
+module Todoable
   class Client
-    attr_accessor :token, :username, :password, :api_url
+    include Todoable::Client::List
+
+    attr_accessor :auth, :username, :password, :api_url
 
     def initialize(username: nil, password: nil)
       @username = username
@@ -20,18 +25,31 @@ module Todoable
               'Accept'       => 'application/json'
           }
       }
-      @token = HTTParty.post("#{API_URL}/authenticate", options)
+      @auth = HTTParty.post("#{API_URL}/authenticate", options)
 
-      unless @token['token']
+      unless @auth['token']
         raise Todoable::Errors.new(['invalid :username and :password combination'])
       end
+    end
+
+    def request(method:, endpoint:, params: {})
+      authenticate
+      options = {
+        headers: {
+            'Content-Type' => 'application/json',
+            'Accept'       => 'application/json',
+            'Authorization' => "Token token=#{@auth['token']}"
+        }
+      }
+      url = api_url + endpoint
+      HTTParty.send(method, url, options)
     end
 
     private
 
     def valid_token?
-      return false unless @token
-      Time.parse(@token['expires_at']) > Time.now
+      return false unless @auth
+      Time.parse(@auth['expires_at']) > Time.now
     end
 
     def validate_inputs

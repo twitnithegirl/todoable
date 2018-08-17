@@ -1,27 +1,66 @@
 ---
 http_interactions:
 - request:
+    method: post
+    uri: http://todoable.teachable.tech/api/authenticate
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Authorization:
+      - Basic YnJpdG5pYWxleGFuZGVyQGdtYWlsLmNvbTp0b2RvYWJsZQ==
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 17 Aug 2018 02:16:35 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '88'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - thin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"token":"ee28c71b-37ad-44b0-9887-f95d6da55052","expires_at":"2018-08-17T02:36:36.709Z"}'
+    http_version: 
+  recorded_at: Fri, 17 Aug 2018 02:16:36 GMT
+- request:
     method: get
-    uri: http://todoable.teachable.tech/api//lists/1
+    uri: http://todoable.teachable.tech/api/lists
     body:
       encoding: US-ASCII
       string: ''
     headers:
-      User-Agent:
-      - Faraday v0.15.2
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Content-Type:
+      - application/json
       Accept:
-      - "*/*"
+      - application/json
+      Authorization:
+      - Token token=ee28c71b-37ad-44b0-9887-f95d6da55052
   response:
     status:
-      code: 401
-      message: Unauthorized
+      code: 200
+      message: OK
     headers:
       Date:
-      - Thu, 16 Aug 2018 19:51:01 GMT
+      - Fri, 17 Aug 2018 02:16:36 GMT
       Connection:
       - keep-alive
+      Content-Type:
+      - application/json;charset=utf-8
       Content-Length:
       - '12'
       X-Content-Type-Options:
@@ -32,7 +71,7 @@ http_interactions:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: Unauthorized
+      string: '{"lists":[]}'
     http_version: 
-  recorded_at: Thu, 16 Aug 2018 19:51:01 GMT
+  recorded_at: Fri, 17 Aug 2018 02:16:36 GMT
 recorded_with: VCR 4.0.0
