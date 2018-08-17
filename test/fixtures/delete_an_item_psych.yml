@@ -5,7 +5,7 @@ http_interactions:
     uri: http://todoable.teachable.tech/api/lists/5e147139-fead-42c5-a3a0-ace6af539594/items
     body:
       encoding: UTF-8
-      string: '{"item":{"name":"Call mom"}}'
+      string: '{"item":{"name":"Lame todootle doot"}}'
     headers:
       Content-Type:
       - application/json
@@ -19,15 +19,15 @@ http_interactions:
       message: Created
     headers:
       Date:
-      - Fri, 17 Aug 2018 15:30:17 GMT
+      - Fri, 17 Aug 2018 15:38:13 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json;charset=utf-8
       Location:
-      - http://todoable.teachable.tech/api/lists/5e147139-fead-42c5-a3a0-ace6af539594/items/233c704b-4273-445a-bbbb-0644b90bacd0
+      - http://todoable.teachable.tech/api/lists/5e147139-fead-42c5-a3a0-ace6af539594/items/bc8de8ec-4006-4685-8cef-ff348dce6c33
       Content-Length:
-      - '211'
+      - '221'
       X-Content-Type-Options:
       - nosniff
       Server:
@@ -36,12 +36,12 @@ http_interactions:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"name":"Call mom","finished_at":null,"src":"http://todoable.teachable.tech/api/lists/5e147139-fead-42c5-a3a0-ace6af539594/items/233c704b-4273-445a-bbbb-0644b90bacd0","id":"233c704b-4273-445a-bbbb-0644b90bacd0"}'
+      string: '{"name":"Lame todootle doot","finished_at":null,"src":"http://todoable.teachable.tech/api/lists/5e147139-fead-42c5-a3a0-ace6af539594/items/bc8de8ec-4006-4685-8cef-ff348dce6c33","id":"bc8de8ec-4006-4685-8cef-ff348dce6c33"}'
     http_version: 
-  recorded_at: Fri, 17 Aug 2018 15:30:18 GMT
+  recorded_at: Fri, 17 Aug 2018 15:38:13 GMT
 - request:
-    method: put
-    uri: http://todoable.teachable.tech/api/lists/5e147139-fead-42c5-a3a0-ace6af539594/items/233c704b-4273-445a-bbbb-0644b90bacd0/finish
+    method: delete
+    uri: http://todoable.teachable.tech/api/lists/5e147139-fead-42c5-a3a0-ace6af539594/items/3
     body:
       encoding: UTF-8
       string: "{}"
@@ -54,26 +54,30 @@ http_interactions:
       - Token token=f24ee8aa-eb1b-4ad8-b5fd-d28f5036f2ee
   response:
     status:
-      code: 200
-      message: OK
+      code: 404
+      message: Not Found
     headers:
       Date:
-      - Fri, 17 Aug 2018 15:30:17 GMT
+      - Fri, 17 Aug 2018 15:38:13 GMT
       Connection:
       - keep-alive
       Content-Type:
-      - application/json;charset=utf-8
+      - text/html;charset=utf-8
       Content-Length:
-      - '17'
+      - '0'
+      X-Xss-Protection:
+      - 1; mode=block
       X-Content-Type-Options:
       - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
       Server:
       - thin
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: Call mom finished
+      string: ''
     http_version: 
-  recorded_at: Fri, 17 Aug 2018 15:30:18 GMT
+  recorded_at: Fri, 17 Aug 2018 15:38:13 GMT
 recorded_with: VCR 4.0.0

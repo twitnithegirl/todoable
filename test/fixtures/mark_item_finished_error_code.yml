@@ -1,0 +1,120 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://todoable.teachable.tech/api/lists/5e147139-fead-42c5-a3a0-ace6af539594/items
+    body:
+      encoding: UTF-8
+      string: '{"item":{"name":"Call dad"}}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Authorization:
+      - Token token=f24ee8aa-eb1b-4ad8-b5fd-d28f5036f2ee
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Fri, 17 Aug 2018 15:36:54 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json;charset=utf-8
+      Location:
+      - http://todoable.teachable.tech/api/lists/5e147139-fead-42c5-a3a0-ace6af539594/items/21c28fad-5d58-402d-aad5-21b7c6c21747
+      Content-Length:
+      - '211'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - thin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"name":"Call dad","finished_at":null,"src":"http://todoable.teachable.tech/api/lists/5e147139-fead-42c5-a3a0-ace6af539594/items/21c28fad-5d58-402d-aad5-21b7c6c21747","id":"21c28fad-5d58-402d-aad5-21b7c6c21747"}'
+    http_version: 
+  recorded_at: Fri, 17 Aug 2018 15:36:55 GMT
+- request:
+    method: put
+    uri: http://todoable.teachable.tech/api/lists/5e147139-fead-42c5-a3a0-ace6af539594/items/21c28fad-5d58-402d-aad5-21b7c6c21747/finish
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Authorization:
+      - Token token=f24ee8aa-eb1b-4ad8-b5fd-d28f5036f2ee
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 17 Aug 2018 15:36:55 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '17'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - thin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: Call dad finished
+    http_version: 
+  recorded_at: Fri, 17 Aug 2018 15:36:55 GMT
+- request:
+    method: put
+    uri: http://todoable.teachable.tech/api/lists/5e147139-fead-42c5-a3a0-ace6af539594/items/21c28fad-5d58-402d-aad5-21b7c6c21747/finish
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Authorization:
+      - Token token=f24ee8aa-eb1b-4ad8-b5fd-d28f5036f2ee
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Fri, 17 Aug 2018 15:36:54 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '0'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server:
+      - thin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 17 Aug 2018 15:36:55 GMT
+recorded_with: VCR 4.0.0

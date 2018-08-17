@@ -2,32 +2,32 @@
 http_interactions:
 - request:
     method: post
-    uri: http://todoable.teachable.tech/api/lists/5e147139-fead-42c5-a3a0-ace6af539594/items
+    uri: http://todoable.teachable.tech/api/lists
     body:
       encoding: UTF-8
-      string: '{"item":{"name":"Call mom"}}'
+      string: '{"list":{"name":"Woohoo, a list"}}'
     headers:
       Content-Type:
       - application/json
       Accept:
       - application/json
       Authorization:
-      - Token token=f24ee8aa-eb1b-4ad8-b5fd-d28f5036f2ee
+      - Token token=d94f9f51-a135-4dd7-8af3-35cab606f933
   response:
     status:
       code: 201
       message: Created
     headers:
       Date:
-      - Fri, 17 Aug 2018 15:30:17 GMT
+      - Fri, 17 Aug 2018 16:43:38 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json;charset=utf-8
       Location:
-      - http://todoable.teachable.tech/api/lists/5e147139-fead-42c5-a3a0-ace6af539594/items/233c704b-4273-445a-bbbb-0644b90bacd0
+      - http://todoable.teachable.tech/api/lists/52a9ea45-a528-4953-9953-ffd6a9c5a7bc
       Content-Length:
-      - '211'
+      - '155'
       X-Content-Type-Options:
       - nosniff
       Server:
@@ -36,35 +36,35 @@ http_interactions:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"name":"Call mom","finished_at":null,"src":"http://todoable.teachable.tech/api/lists/5e147139-fead-42c5-a3a0-ace6af539594/items/233c704b-4273-445a-bbbb-0644b90bacd0","id":"233c704b-4273-445a-bbbb-0644b90bacd0"}'
+      string: '{"name":"Woohoo, a list","src":"http://todoable.teachable.tech/api/lists/52a9ea45-a528-4953-9953-ffd6a9c5a7bc","id":"52a9ea45-a528-4953-9953-ffd6a9c5a7bc"}'
     http_version: 
-  recorded_at: Fri, 17 Aug 2018 15:30:18 GMT
+  recorded_at: Fri, 17 Aug 2018 16:43:39 GMT
 - request:
-    method: put
-    uri: http://todoable.teachable.tech/api/lists/5e147139-fead-42c5-a3a0-ace6af539594/items/233c704b-4273-445a-bbbb-0644b90bacd0/finish
+    method: post
+    uri: http://todoable.teachable.tech/api/lists
     body:
       encoding: UTF-8
-      string: "{}"
+      string: '{"list":{"name":"Woohoo, a list"}}'
     headers:
       Content-Type:
       - application/json
       Accept:
       - application/json
       Authorization:
-      - Token token=f24ee8aa-eb1b-4ad8-b5fd-d28f5036f2ee
+      - Token token=d94f9f51-a135-4dd7-8af3-35cab606f933
   response:
     status:
-      code: 200
-      message: OK
+      code: 422
+      message: Unprocessable Entity
     headers:
       Date:
-      - Fri, 17 Aug 2018 15:30:17 GMT
+      - Fri, 17 Aug 2018 16:43:39 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
-      - '17'
+      - '35'
       X-Content-Type-Options:
       - nosniff
       Server:
@@ -73,7 +73,7 @@ http_interactions:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: Call mom finished
+      string: '{"name":["has already been taken"]}'
     http_version: 
-  recorded_at: Fri, 17 Aug 2018 15:30:18 GMT
+  recorded_at: Fri, 17 Aug 2018 16:43:39 GMT
 recorded_with: VCR 4.0.0

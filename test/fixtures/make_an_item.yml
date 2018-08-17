@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://todoable.teachable.tech/api/lists/fb09742f-428a-47ac-b0e5-4bebec215fbd/items
+    uri: http://todoable.teachable.tech/api/lists/5e147139-fead-42c5-a3a0-ace6af539594/items
     body:
       encoding: UTF-8
       string: '{"item":{"name":"Workout"}}'
@@ -12,20 +12,20 @@ http_interactions:
       Accept:
       - application/json
       Authorization:
-      - Token token=8a6375b1-501b-475c-ac5d-54f77f5b166a
+      - Token token=f24ee8aa-eb1b-4ad8-b5fd-d28f5036f2ee
   response:
     status:
       code: 201
       message: Created
     headers:
       Date:
-      - Fri, 17 Aug 2018 14:54:11 GMT
+      - Fri, 17 Aug 2018 15:29:40 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json;charset=utf-8
       Location:
-      - http://todoable.teachable.tech/api/lists/fb09742f-428a-47ac-b0e5-4bebec215fbd/items/34d81462-91a7-4397-b848-46c743bf56ff
+      - http://todoable.teachable.tech/api/lists/5e147139-fead-42c5-a3a0-ace6af539594/items/a941f196-e823-4de9-acfe-8cc7263170b8
       Content-Length:
       - '210'
       X-Content-Type-Options:
@@ -36,7 +36,7 @@ http_interactions:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"name":"Workout","finished_at":null,"src":"http://todoable.teachable.tech/api/lists/fb09742f-428a-47ac-b0e5-4bebec215fbd/items/34d81462-91a7-4397-b848-46c743bf56ff","id":"34d81462-91a7-4397-b848-46c743bf56ff"}'
+      string: '{"name":"Workout","finished_at":null,"src":"http://todoable.teachable.tech/api/lists/5e147139-fead-42c5-a3a0-ace6af539594/items/a941f196-e823-4de9-acfe-8cc7263170b8","id":"a941f196-e823-4de9-acfe-8cc7263170b8"}'
     http_version: 
-  recorded_at: Fri, 17 Aug 2018 14:54:12 GMT
+  recorded_at: Fri, 17 Aug 2018 15:29:41 GMT
 recorded_with: VCR 4.0.0

@@ -5,27 +5,27 @@ http_interactions:
     uri: http://todoable.teachable.tech/api/lists
     body:
       encoding: UTF-8
-      string: '{"list":{"name":"Exciting new listy"}}'
+      string: '{"list":{"name":"List with new item"}}'
     headers:
       Content-Type:
       - application/json
       Accept:
       - application/json
       Authorization:
-      - Token token=d94f9f51-a135-4dd7-8af3-35cab606f933
+      - Token token=f24ee8aa-eb1b-4ad8-b5fd-d28f5036f2ee
   response:
     status:
       code: 201
       message: Created
     headers:
       Date:
-      - Fri, 17 Aug 2018 16:43:39 GMT
+      - Fri, 17 Aug 2018 15:29:40 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json;charset=utf-8
       Location:
-      - http://todoable.teachable.tech/api/lists/0336af63-7f57-4d73-a78b-4a43bc6be482
+      - http://todoable.teachable.tech/api/lists/5e147139-fead-42c5-a3a0-ace6af539594
       Content-Length:
       - '159'
       X-Content-Type-Options:
@@ -36,7 +36,7 @@ http_interactions:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"name":"Exciting new listy","src":"http://todoable.teachable.tech/api/lists/0336af63-7f57-4d73-a78b-4a43bc6be482","id":"0336af63-7f57-4d73-a78b-4a43bc6be482"}'
+      string: '{"name":"List with new item","src":"http://todoable.teachable.tech/api/lists/5e147139-fead-42c5-a3a0-ace6af539594","id":"5e147139-fead-42c5-a3a0-ace6af539594"}'
     http_version: 
-  recorded_at: Fri, 17 Aug 2018 16:43:40 GMT
+  recorded_at: Fri, 17 Aug 2018 15:29:41 GMT
 recorded_with: VCR 4.0.0
