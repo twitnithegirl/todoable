@@ -32,16 +32,16 @@ todoable.finish_item(list_id: <list id>, item_id: <item id>)
 
 ### Available methods
 
-| Method        | Required Inputs                     | Return Hash                                                   |
-|---            |---                                  |---                                                            |
-|#lists         | NONE                                |{ 'body': \[{ <all lists> }],      'code': <response code> }   |
-|#new_list      | name:     String                    |{ 'body': {<list body>},           'code': <response code> }   |
-|#find_list     | id:       String                    |{ 'body': {<list body>},           'code': <response code> }   |
-|#update_list   | id:       String, name:     String  |{ 'body': "<list name> updated",   'code': <response code> }   |
-|#delete_list   | id:       String                    |{ 'body': nil,                     'code': <response code> }   |
-|#new_item      | list_id:  String, name:     String  |{ 'body': {<item body>},           'code': <response code> }   |
-|#finish_item   | list_id:  String, item_id:  String  |{ 'body': "<item name> finished",  'code': <response code> }   |
-|#delete_item   | list_id:  String, item_id:  String  |{ 'body': nil,                     'code': <response code> }   |
+| Method        | Required Inputs                     | Return Hash                                                    |
+|---            |---                                  |---                                                             |
+|#lists         | NONE                                |{ 'body': \[{ \<all lists> }],     'code': \<response code> }   |
+|#new_list      | name:     String                    |{ 'body': { \<list body> },        'code': \<response code> }   |
+|#find_list     | id:       String                    |{ 'body': { \<list body> },        'code': \<response code> }   |
+|#update_list   | id:       String, name:     String  |{ 'body': "\<list name> updated",  'code': \<response code> }   |
+|#delete_list   | id:       String                    |{ 'body': nil,                     'code': \<response code> }   |
+|#new_item      | list_id:  String, name:     String  |{ 'body': { \<item body> },        'code': \<response code> }   |
+|#finish_item   | list_id:  String, item_id:  String  |{ 'body': "\<item name> finished", 'code': \<response code> }   |
+|#delete_item   | list_id:  String, item_id:  String  |{ 'body': nil,                     'code': \<response code> }   |
 
 If a method is unsuccessful you will get back an error response in the same hash format with information on the failure.
 
