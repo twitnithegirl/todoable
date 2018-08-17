@@ -18,6 +18,16 @@ module Todoable
       def find_list(id)
         request(method: :get, endpoint: "/lists/#{id}")
       end
+
+      def update_list(id, name)
+        list_body = { 'list' => {'name' => name } }
+        request(method: :patch, endpoint: "/lists/#{id}", params: list_body)
+
+      end
+
+      def delete_list(id)
+        request(method: :delete, endpoint: "/lists/#{id}")
+      end
     end
   end
 end

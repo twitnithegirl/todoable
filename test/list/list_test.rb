@@ -33,4 +33,23 @@ class TodoableListTest < Minitest::Test
       assert_equal 'Awesome list', response['name']
     end
   end
+
+  def test_it_updates_a_list
+    setup
+    VCR.use_cassette('update_a_list') do
+      list = @client.new_list('Neato list')
+      response = @client.update_list(list['id'], 'Not really a neat list')
+      assert_equal 'Not really a neat list updated', response.body
+      assert_equal 200, response.code
+    end
+  end
+
+  def test_deleting_a_list
+    setup
+    VCR.use_cassette('delete_a_list') do
+      list = @client.new_list('Lame list')
+      response = @client.delete_list(list['id'])
+      assert_equal 204, response.code
+    end
+  end
 end
