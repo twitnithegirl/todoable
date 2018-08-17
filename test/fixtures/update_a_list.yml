@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 17 Aug 2018 03:10:29 GMT
+      - Fri, 17 Aug 2018 03:37:07 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -34,37 +34,37 @@ http_interactions:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"token":"9909287b-e594-41de-a4cb-a65f2b142a4c","expires_at":"2018-08-17T03:30:30.549Z"}'
+      string: '{"token":"2f1714f0-dd36-4bf5-a862-caff52eefb61","expires_at":"2018-08-17T03:57:07.904Z"}'
     http_version: 
-  recorded_at: Fri, 17 Aug 2018 03:10:30 GMT
+  recorded_at: Fri, 17 Aug 2018 03:37:07 GMT
 - request:
     method: post
     uri: http://todoable.teachable.tech/api/lists
     body:
       encoding: UTF-8
-      string: '{"list":{"name":"Neato list"}}'
+      string: '{"list":{"name":"Neat todoable"}}'
     headers:
       Content-Type:
       - application/json
       Accept:
       - application/json
       Authorization:
-      - Token token=9909287b-e594-41de-a4cb-a65f2b142a4c
+      - Token token=2f1714f0-dd36-4bf5-a862-caff52eefb61
   response:
     status:
       code: 201
       message: Created
     headers:
       Date:
-      - Fri, 17 Aug 2018 03:10:30 GMT
+      - Fri, 17 Aug 2018 03:37:07 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json;charset=utf-8
       Location:
-      - http://todoable.teachable.tech/api/lists/8a83a56d-8e33-4b7d-9574-ec3121b5d3ba
+      - http://todoable.teachable.tech/api/lists/ce7b0af5-e193-449a-9777-54ea7f873add
       Content-Length:
-      - '151'
+      - '154'
       X-Content-Type-Options:
       - nosniff
       Server:
@@ -73,35 +73,35 @@ http_interactions:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"name":"Neato list","src":"http://todoable.teachable.tech/api/lists/8a83a56d-8e33-4b7d-9574-ec3121b5d3ba","id":"8a83a56d-8e33-4b7d-9574-ec3121b5d3ba"}'
+      string: '{"name":"Neat todoable","src":"http://todoable.teachable.tech/api/lists/ce7b0af5-e193-449a-9777-54ea7f873add","id":"ce7b0af5-e193-449a-9777-54ea7f873add"}'
     http_version: 
-  recorded_at: Fri, 17 Aug 2018 03:10:30 GMT
+  recorded_at: Fri, 17 Aug 2018 03:37:08 GMT
 - request:
     method: patch
-    uri: http://todoable.teachable.tech/api/lists/8a83a56d-8e33-4b7d-9574-ec3121b5d3ba
+    uri: http://todoable.teachable.tech/api/lists/ce7b0af5-e193-449a-9777-54ea7f873add
     body:
       encoding: UTF-8
-      string: '{"list":{"name":"Not really a neat list"}}'
+      string: '{"list":{"name":"Not really neat"}}'
     headers:
       Content-Type:
       - application/json
       Accept:
       - application/json
       Authorization:
-      - Token token=9909287b-e594-41de-a4cb-a65f2b142a4c
+      - Token token=2f1714f0-dd36-4bf5-a862-caff52eefb61
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Fri, 17 Aug 2018 03:10:30 GMT
+      - Fri, 17 Aug 2018 03:37:07 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
-      - '30'
+      - '23'
       X-Content-Type-Options:
       - nosniff
       Server:
@@ -110,7 +110,7 @@ http_interactions:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: Not really a neat list updated
+      string: Not really neat updated
     http_version: 
-  recorded_at: Fri, 17 Aug 2018 03:10:30 GMT
+  recorded_at: Fri, 17 Aug 2018 03:37:08 GMT
 recorded_with: VCR 4.0.0

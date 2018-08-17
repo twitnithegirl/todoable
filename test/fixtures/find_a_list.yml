@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 17 Aug 2018 03:00:52 GMT
+      - Fri, 17 Aug 2018 03:35:29 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -34,37 +34,37 @@ http_interactions:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"token":"168ba7f0-dfd5-4380-8f83-22137f703f12","expires_at":"2018-08-17T03:20:52.945Z"}'
+      string: '{"token":"51332cfa-d511-4376-84ec-2e25bc3e9ab7","expires_at":"2018-08-17T03:55:29.923Z"}'
     http_version: 
-  recorded_at: Fri, 17 Aug 2018 03:00:52 GMT
+  recorded_at: Fri, 17 Aug 2018 03:35:29 GMT
 - request:
     method: post
     uri: http://todoable.teachable.tech/api/lists
     body:
       encoding: UTF-8
-      string: '{"list":{"name":"Awesome list"}}'
+      string: '{"list":{"name":"Doot Doot"}}'
     headers:
       Content-Type:
       - application/json
       Accept:
       - application/json
       Authorization:
-      - Token token=168ba7f0-dfd5-4380-8f83-22137f703f12
+      - Token token=51332cfa-d511-4376-84ec-2e25bc3e9ab7
   response:
     status:
       code: 201
       message: Created
     headers:
       Date:
-      - Fri, 17 Aug 2018 03:00:52 GMT
+      - Fri, 17 Aug 2018 03:35:29 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json;charset=utf-8
       Location:
-      - http://todoable.teachable.tech/api/lists/7ae20508-37a6-4ba4-a73c-c657e0a59020
+      - http://todoable.teachable.tech/api/lists/5ec87ad9-6517-4c04-aaea-95753669f4ae
       Content-Length:
-      - '153'
+      - '150'
       X-Content-Type-Options:
       - nosniff
       Server:
@@ -73,12 +73,12 @@ http_interactions:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"name":"Awesome list","src":"http://todoable.teachable.tech/api/lists/7ae20508-37a6-4ba4-a73c-c657e0a59020","id":"7ae20508-37a6-4ba4-a73c-c657e0a59020"}'
+      string: '{"name":"Doot Doot","src":"http://todoable.teachable.tech/api/lists/5ec87ad9-6517-4c04-aaea-95753669f4ae","id":"5ec87ad9-6517-4c04-aaea-95753669f4ae"}'
     http_version: 
-  recorded_at: Fri, 17 Aug 2018 03:00:53 GMT
+  recorded_at: Fri, 17 Aug 2018 03:35:30 GMT
 - request:
     method: get
-    uri: http://todoable.teachable.tech/api/lists/7ae20508-37a6-4ba4-a73c-c657e0a59020
+    uri: http://todoable.teachable.tech/api/lists/5ec87ad9-6517-4c04-aaea-95753669f4ae
     body:
       encoding: UTF-8
       string: "{}"
@@ -88,20 +88,20 @@ http_interactions:
       Accept:
       - application/json
       Authorization:
-      - Token token=168ba7f0-dfd5-4380-8f83-22137f703f12
+      - Token token=51332cfa-d511-4376-84ec-2e25bc3e9ab7
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Fri, 17 Aug 2018 03:01:53 GMT
+      - Fri, 17 Aug 2018 03:35:29 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
-      - '34'
+      - '31'
       X-Content-Type-Options:
       - nosniff
       Server:
@@ -110,7 +110,7 @@ http_interactions:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"name":"Awesome list","items":[]}'
+      string: '{"name":"Doot Doot","items":[]}'
     http_version: 
-  recorded_at: Fri, 17 Aug 2018 03:01:54 GMT
+  recorded_at: Fri, 17 Aug 2018 03:35:30 GMT
 recorded_with: VCR 4.0.0
