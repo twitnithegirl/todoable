@@ -34,15 +34,13 @@ module Todoable
 
     def request(method:, endpoint:, params: {})
       authenticate
-      options = {
-        headers: {
+      headers =  {
             'Content-Type' => 'application/json',
             'Accept'       => 'application/json',
             'Authorization' => "Token token=#{@auth['token']}"
         }
-      }
       url = api_url + endpoint
-      HTTParty.send(method, url, options)
+      HTTParty.send(method, url, headers: headers, body: params.to_json)
     end
 
     private

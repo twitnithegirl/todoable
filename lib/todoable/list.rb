@@ -10,10 +10,13 @@ module Todoable
         request(method: :get, endpoint: '/lists')
       end
 
+      def new_list(name)
+        list_body = { 'list' => {'name' => name } }
+        request(method: :post, endpoint: '/lists', params: list_body)
+      end
+
       def find(id)
-        response = HTTParty.get("#{API_URL}/lists/#{id}")
-        attributes = JSON.parse(response.body)
-        new(attributes)
+        request(method: :get, endpoint: "/lists/#{id}")
       end
     end
   end

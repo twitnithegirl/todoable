@@ -1,0 +1,79 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://todoable.teachable.tech/api/authenticate
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Authorization:
+      - Basic YnJpdG5pYWxleGFuZGVyQGdtYWlsLmNvbTp0b2RvYWJsZQ==
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 17 Aug 2018 02:50:17 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '88'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - thin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"token":"e099ffb3-b0a6-4921-a14e-10b09be14c53","expires_at":"2018-08-17T03:10:18.249Z"}'
+    http_version: 
+  recorded_at: Fri, 17 Aug 2018 02:50:18 GMT
+- request:
+    method: post
+    uri: http://todoable.teachable.tech/api/lists
+    body:
+      encoding: UTF-8
+      string: '{"list":{"name":"Exciting new list"}}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Authorization:
+      - Token token=e099ffb3-b0a6-4921-a14e-10b09be14c53
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Fri, 17 Aug 2018 02:50:18 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json;charset=utf-8
+      Location:
+      - http://todoable.teachable.tech/api/lists/015df034-0ee7-4482-afca-a176408f67e7
+      Content-Length:
+      - '158'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - thin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"name":"Exciting new list","src":"http://todoable.teachable.tech/api/lists/015df034-0ee7-4482-afca-a176408f67e7","id":"015df034-0ee7-4482-afca-a176408f67e7"}'
+    http_version: 
+  recorded_at: Fri, 17 Aug 2018 02:50:18 GMT
+recorded_with: VCR 4.0.0
