@@ -28,9 +28,9 @@ class TodoableListTest < Minitest::Test
   def test_it_finds_a_list
     setup
     VCR.use_cassette('find_a_list') do
-      list = @client.new_list('My great list')
+      list = @client.new_list('Awesome list')
       response = @client.find_list(list['id'])
-      assert_equal 'My great list', response['name']
+      assert_equal 'Awesome list', response['name']
     end
   end
 end

@@ -15,7 +15,7 @@ module Todoable
         request(method: :post, endpoint: '/lists', params: list_body)
       end
 
-      def find(id)
+      def find_list(id)
         request(method: :get, endpoint: "/lists/#{id}")
       end
     end
