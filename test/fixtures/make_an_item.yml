@@ -2,32 +2,32 @@
 http_interactions:
 - request:
     method: post
-    uri: http://todoable.teachable.tech/api/lists/45ad03cf-6c7b-47af-88d4-c6165c9f9422/items
+    uri: http://todoable.teachable.tech/api/lists/fb09742f-428a-47ac-b0e5-4bebec215fbd/items
     body:
       encoding: UTF-8
-      string: '{"item":{"name":"Buy flour"}}'
+      string: '{"item":{"name":"Workout"}}'
     headers:
       Content-Type:
       - application/json
       Accept:
       - application/json
       Authorization:
-      - Token token=a0de8b7f-d81c-488a-b07a-db821347ebbb
+      - Token token=8a6375b1-501b-475c-ac5d-54f77f5b166a
   response:
     status:
       code: 201
       message: Created
     headers:
       Date:
-      - Fri, 17 Aug 2018 03:49:52 GMT
+      - Fri, 17 Aug 2018 14:54:11 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json;charset=utf-8
       Location:
-      - http://todoable.teachable.tech/api/lists/45ad03cf-6c7b-47af-88d4-c6165c9f9422/items/ed764dba-70a8-4d2c-88a3-eb3edb36997a
+      - http://todoable.teachable.tech/api/lists/fb09742f-428a-47ac-b0e5-4bebec215fbd/items/34d81462-91a7-4397-b848-46c743bf56ff
       Content-Length:
-      - '212'
+      - '210'
       X-Content-Type-Options:
       - nosniff
       Server:
@@ -36,7 +36,7 @@ http_interactions:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"name":"Buy flour","finished_at":null,"src":"http://todoable.teachable.tech/api/lists/45ad03cf-6c7b-47af-88d4-c6165c9f9422/items/ed764dba-70a8-4d2c-88a3-eb3edb36997a","id":"ed764dba-70a8-4d2c-88a3-eb3edb36997a"}'
+      string: '{"name":"Workout","finished_at":null,"src":"http://todoable.teachable.tech/api/lists/fb09742f-428a-47ac-b0e5-4bebec215fbd/items/34d81462-91a7-4397-b848-46c743bf56ff","id":"34d81462-91a7-4397-b848-46c743bf56ff"}'
     http_version: 
-  recorded_at: Fri, 17 Aug 2018 03:49:52 GMT
+  recorded_at: Fri, 17 Aug 2018 14:54:12 GMT
 recorded_with: VCR 4.0.0
