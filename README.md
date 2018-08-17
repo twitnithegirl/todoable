@@ -1,38 +1,61 @@
 # Todoable
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/todoable`. To experiment with that code, run `bin/console` for an interactive prompt.
+This gem wraps the Teachable Todoable To To List API
 
-TODO: Delete this and the text above, and describe your gem
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Add the following to your gemfile:
 
 ```ruby
-gem 'todoable'
+gem 'todoable', :git => 'git://github.com/twitnithegirl/todoable.git'
 ```
 
 And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install todoable
-
 ## Usage
 
-TODO: Write usage instructions here
+First, get a new instance of the Todoable Client like
+
+```ruby
+todoable = Todoable::Client.new(username: "your username", password: "your password")
+```
+Both Username and Password are required and you will not be able to create the client without passing them in.
+
+Once you have the client you have several methods available to you. 
+You can call them like:
+```ruby
+todoable.finish_item(list_id: <list id>, item_id: <item id>)
+```
+
+### Available methods
+
+| Method        | Required Inputs                     | Return Hash                                                   |
+|---            |---                                  |---                                                            |
+|#lists         | NONE                                |{ 'body': \[{ <all lists> }],      'code': <response code> }   |
+|#new_list      | name:     String                    |{ 'body': {<list body>},           'code': <response code> }   |
+|#find_list     | id:       String                    |{ 'body': {<list body>},           'code': <response code> }   |
+|#update_list   | id:       String, name:     String  |{ 'body': "<list name> updated",   'code': <response code> }   |
+|#delete_list   | id:       String                    |{ 'body': nil,                     'code': <response code> }   |
+|#new_item      | list_id:  String, name:     String  |{ 'body': {<item body>},           'code': <response code> }   |
+|#finish_item   | list_id:  String, item_id:  String  |{ 'body': "<item name> finished",  'code': <response code> }   |
+|#delete_item   | list_id:  String, item_id:  String  |{ 'body': nil,                     'code': <response code> }   |
+
+If a method is unsuccessful you will get back an error response in the same hash format with information on the failure.
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+After checking out the repo, run `bin/setup` to install dependencies. Then, run `ruby test` to run the tests.
+
+`pry` is built into dev so you can use it to debug and step through tests.
 
 To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/todoable. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/twitnithegirl/todoable. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
